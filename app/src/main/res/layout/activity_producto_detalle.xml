@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductoDetalleActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <ImageView
+                    android:src="@drawable/ic_menu_producto"
+                    android:id="@+id/APDIVImagenProducto"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"/>
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <Button
+                    android:id="@+id/APDBBuscarImagen"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_button_imagen_buscar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+                <Button
+                    android:id="@+id/APDBQuitarImagen"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_button_imagen_cancelar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+        </LinearLayout>
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="@string/nombre_producto"
+                    android:background="@color/blanco"
+                    android:layout_margin="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/APDTIETNombreProducto"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="@string/precio_item"
+                        android:background="@color/blanco"
+                        android:layout_margin="3dp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/APDTIETPrecioProducto"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@+id/APDLLAgregar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/APDBAgregar"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/button_circler_agregar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@+id/APDLLModificar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/APDBModificar"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/button_circler_modificar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <Button
+                            android:id="@+id/APDBEliminar"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/button_circler_eliminar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+

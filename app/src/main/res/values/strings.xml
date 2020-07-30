@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sistema_Ventas</string>
+    <string name="nombre_producto">Producto</string>
+    <string name="nombre_cliente">Cliente</string>
+    <string name="nombre_venta">Venta</string>
+    <string name="nombre_historial">Historial</string>
+    <string name="busca_producto">Buscar Producto</string>
+    <string name="busca_cliente">Buscar Cliente</string>
+    <string name="nombre_item_producto">Nombre del Producto</string>
+    <string name="precio_item">Precio</string>
+    <string name="precio_item_cero">0.00</string>
+    <string name="nombre">Nombre</string>
+    <string name="numero_telefono">Numero de Telefono</string>
+    <string name="email">Correo Electronico</string>
+    <string name="direccion">Direccion</string>
+
+</resources>
