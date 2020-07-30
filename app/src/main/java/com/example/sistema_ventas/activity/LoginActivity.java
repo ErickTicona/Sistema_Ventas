@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }else
                     Toast.makeText(this,"Nombre de Usuario Incorrectos!",Toast.LENGTH_LONG).show();
             }else
-                txtUsuario.setError("Campos Vacios!");
+                txtUsuario.setError("Campos Vacios!!");
         }else if(v.getId() == R.id.btnLRegistro){
             Intent intent = new Intent(this,SigninActivity.class);
             startActivity(intent);
