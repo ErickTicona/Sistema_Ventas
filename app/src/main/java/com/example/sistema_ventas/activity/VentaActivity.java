@@ -86,8 +86,8 @@ public class VentaActivity extends AppCompatActivity {
         adaptador = new ProductoItemRecycler(listaProducto, new ProductoItemRecycler.OnItemClickListener() {
             @Override
             public void OnClickItem(Producto producto, int posicion) {
-                listaProducto.get(posicion).setProd_seleccionado(producto.getProd_seleccionado());
-                cargarLista();
+                listaProducto.get(posicion).setProd_seleccionado(!producto.getProd_seleccionado());
+                cargarRecycler(listaProducto);
             }
         });
 

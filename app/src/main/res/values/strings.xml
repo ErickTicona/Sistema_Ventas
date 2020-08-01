@@ -13,5 +13,10 @@
     <string name="numero_telefono">Numero de Telefono</string>
     <string name="email">Correo Electronico</string>
     <string name="direccion">Direccion</string>
+    <string name="observacion">Observacion</string>
+    <string name="total">Total</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="precio">Precio</string>
+    <string name="precio_cero">0</string>
 
 </resources>

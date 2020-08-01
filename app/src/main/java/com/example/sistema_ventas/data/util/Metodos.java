@@ -65,7 +65,7 @@ public class Metodos {
         return gson.toJson(lista);
     }
 
-    public static List<Object> convertirProductoTextoALista(String cadena){
+    public static List<Producto> convertirProductoTextoALista(String cadena){
         Gson gson = new Gson();
 
         Type lista = new TypeToken<List<Producto>>(){}.getType();
