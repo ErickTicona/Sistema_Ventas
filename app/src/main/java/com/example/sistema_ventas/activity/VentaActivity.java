@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.WindowManager;
 import android.widget.EditText;
 
@@ -58,6 +60,23 @@ public class VentaActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(getApplicationContext());
 
         cargarLista();
+
+        buscador.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                cargarLista();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @OnClick(R.id.AVFBNuevoProducto)
@@ -81,7 +100,7 @@ public class VentaActivity extends AppCompatActivity {
         cargarRecycler(listaProducto);
     }
 
-    private void cargarRecycler(List<Producto> listaProducto) {
+    private void cargarRecycler(final List<Producto> listaProducto) {
 
         adaptador = new ProductoItemRecycler(listaProducto, new ProductoItemRecycler.OnItemClickListener() {
             @Override

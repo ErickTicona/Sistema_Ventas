@@ -18,5 +18,9 @@
     <string name="cantidad">Cantidad</string>
     <string name="precio">Precio</string>
     <string name="precio_cero">0</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="hora_actual">13:00</string>
+    <string name="fecha_actual">2020-07-25</string>
 
 </resources>

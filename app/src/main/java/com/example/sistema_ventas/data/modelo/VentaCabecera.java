@@ -1,6 +1,8 @@
 package com.example.sistema_ventas.data.modelo;
 
-public class VentaCabecera {
+import java.io.Serializable;
+
+public class VentaCabecera implements Serializable {
     private int vc_id;
     private String vc_fecha;
     private String vc_hora;

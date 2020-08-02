@@ -114,24 +114,25 @@ public class Select {
 
     public static void seleccionarVentaCabecera(Context context, List<VentaCabecera> lista, String fecha, String buscar){
 
+        lista.clear();
         con = new ConexionSqliteHelper(context);
         db = con.getReadableDatabase();
 
         Cursor tempLista;
 
-        String query = Metodos.concatenar(new Object[]{"select * from", VentaCabeceraTabla.TABLA, " where ",
-        VentaCabeceraTabla.VC_FECHA, " = ? order by", VentaCabeceraTabla.VC_FECHA, " , ", VentaCabeceraTabla.VC_HORA, " desc"});
+        String query = Metodos.concatenar(new Object[]{"select * from ", VentaCabeceraTabla.TABLA, " where ",
+        VentaCabeceraTabla.VC_FECHA, " = ? order by ", VentaCabeceraTabla.VC_FECHA, " , ", VentaCabeceraTabla.VC_HORA, " desc"});
 
         tempLista = db.rawQuery(query, new String[]{fecha});
 
         while (tempLista.moveToNext()){
             VentaCabecera item = new VentaCabecera(
-                    tempLista.getColumnIndex(VentaCabeceraTabla.VC_ID),
-                    String.valueOf(tempLista.getColumnIndex(VentaCabeceraTabla.VC_FECHA)),
-                    String.valueOf(tempLista.getColumnIndex(VentaCabeceraTabla.VC_HORA)),
+                    tempLista.getInt(tempLista.getColumnIndex(VentaCabeceraTabla.VC_ID)),
+                    tempLista.getString(tempLista.getColumnIndex(VentaCabeceraTabla.VC_FECHA)),
+                    tempLista.getString(tempLista.getColumnIndex(VentaCabeceraTabla.VC_HORA)),
                     tempLista.getDouble(tempLista.getColumnIndex(VentaCabeceraTabla.VC_MONTO)),
-                    String.valueOf(tempLista.getColumnIndex(VentaCabeceraTabla.VC_COMENTARIO)),
-                    String.valueOf(tempLista.getColumnIndex(VentaCabeceraTabla.CLIE_NOMBRE))
+                    tempLista.getString(tempLista.getColumnIndex(VentaCabeceraTabla.VC_COMENTARIO)),
+                    tempLista.getString(tempLista.getColumnIndex(VentaCabeceraTabla.CLIE_NOMBRE))
             );
 
             if (buscar.length() > 0){
@@ -149,25 +150,26 @@ public class Select {
     }
 
     public static void seleccionarVentaDetalle(Context context, List<VentaDetalle> lista, int vc_id){
+        lista.clear();
 
         con = new ConexionSqliteHelper(context);
         db = con.getReadableDatabase();
 
         Cursor tempLista;
 
-        String query = Metodos.concatenar(new Object[]{"select * from", VentaDetalleTabla.TABLA, " where ",
-                VentaDetalleTabla.VC_ID, " = ? order by", VentaDetalleTabla.PROD_NOMBRE, " desc"});
+        String query = Metodos.concatenar(new Object[]{"select * from ", VentaDetalleTabla.TABLA, " where ",
+                VentaDetalleTabla.VC_ID, " = ? order by ", VentaDetalleTabla.PROD_NOMBRE, " desc"});
 
         tempLista = db.rawQuery(query, new String[]{String.valueOf(vc_id)});
 
         while (tempLista.moveToNext()) {
             lista.add(new VentaDetalle(
-                    tempLista.getColumnIndex(VentaDetalleTabla.VD_ID),
-                    tempLista.getColumnIndex(VentaDetalleTabla.VD_CANTIDAD),
+                    tempLista.getInt(tempLista.getColumnIndex(VentaDetalleTabla.VD_ID)),
+                    tempLista.getInt(tempLista.getColumnIndex(VentaDetalleTabla.VD_CANTIDAD)),
                     tempLista.getDouble(tempLista.getColumnIndex(VentaDetalleTabla.VD_PRECIO)),
-                    tempLista.getColumnIndex(VentaDetalleTabla.VC_ID),
-                    String.valueOf(tempLista.getColumnIndex(VentaDetalleTabla.PROD_NOMBRE)),
-                    String.valueOf(tempLista.getColumnIndex(VentaDetalleTabla.PROD_RUTA_FOTO))
+                    tempLista.getInt(tempLista.getColumnIndex(VentaDetalleTabla.VC_ID)),
+                    tempLista.getString(tempLista.getColumnIndex(VentaDetalleTabla.PROD_NOMBRE)),
+                    tempLista.getString(tempLista.getColumnIndex(VentaDetalleTabla.PROD_RUTA_FOTO))
             ));
         }
 
