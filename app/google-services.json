@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "968758602311",
+    "firebase_url": "https://sistemaventas-7fa34.firebaseio.com",
+    "project_id": "sistemaventas-7fa34",
+    "storage_bucket": "sistemaventas-7fa34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968758602311:android:908b508e94c54f88111f62",
+        "android_client_info": {
+          "package_name": "com.example.sistema_ventas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968758602311-04u05sco9e6d2oaap8picv9415q2omo2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sistema_ventas",
+            "certificate_hash": "5d3e8a9a7eaaac9fa1ae2beb571df24014208a7f"
+          }
+        },
+        {
+          "client_id": "968758602311-k53g12mo3lvrfe4ihlpg9cdsl9iqjruv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxNp6DptDN8b6dYgSVjvkSHC-m093xbuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968758602311-k53g12mo3lvrfe4ihlpg9cdsl9iqjruv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

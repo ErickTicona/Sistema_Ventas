@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sistema_ventas">
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.VentaHistorialDetalleActivity"></activity>
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.Register_Activity"></activity>
+        <activity android:name=".activity.VentaHistorialDetalleActivity" />
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.LogiinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,5 +29,8 @@
         <activity android:name=".activity.ProductoActivity" />
         <activity android:name=".MainActivity" />
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
 
 </manifest>
